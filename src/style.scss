@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.app {
+    background-image: linear-gradient(120deg, violet, skyblue, orange);
+    min-height: 100vh;
+}
+
+.header {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px gray;
+}
+
+.form {
+    input, button, select {
+        padding: .5rem;
+        font-size: 1.5rem;
+        border: outset;
+        box-shadow: 2px 2px 2px gray;
+        outline: none;
+    }
+    button {
+        background: white;
+        color: skyblue;
+        cursor: pointer;
+        transition: all .75s ease;
+    }  
+    button:hover {
+        color: white;
+        background: skyblue;
+    }
+}
+
+.form, .header {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.to-do-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.to-do {
+    margin: .5rem;
+    color: black;
+    background: white;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+        flex: 1;
+    }
+}
+
+.complete {
+    background: skyblue;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .75s ease;
+    font-size: 1.25rem;
+    &:hover {
+        background: violet;
+        color:white;
+    }
+}
+
+.delete {
+    background: rgb(246, 122, 33);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .75s ease;
+    font-size: 1.25rem;
+    &:hover {
+        background: rgb(255, 60, 60);
+        color: white;
+    }
+}

@@ -17,7 +17,7 @@ const Form = ({input, setInput, list, setList, setStatus}) => {
     }
 
     return(
-        <form>
+        <form className="form">
             <input 
             type="text" 
             className="to-do-input"

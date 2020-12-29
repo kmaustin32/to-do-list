@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 //components
 import Form from './components/Form';
 import ToDoList from './components/ToDoList';
+//Style
+import './style.scss';
 
 const App = () => {
 
@@ -49,7 +51,7 @@ const App = () => {
 
 
     return (
-        <div className="App">
+        <div className="app">
             <div className="header">
                 <h1>Ezra's To Do List </h1>
             </div>
