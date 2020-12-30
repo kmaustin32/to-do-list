@@ -18,9 +18,10 @@ const ListItem = ({text, key, list, setList, item}) => {
         }));
     };
 
+
     return(
         <div className="to-do">
-            <li className="item">{text}</li>
+            <li className={`item ${item.completed ? 'doneItem' : ''}`}>{text}</li>
             <button 
             className="complete" 
             onClick={completeHandler}>Complete</button>

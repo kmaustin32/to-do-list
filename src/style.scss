@@ -33,6 +33,9 @@
         color: white;
         background: skyblue;
     }
+    select {
+        font-size: 1.45rem;
+    }
 }
 
 .form, .header {
@@ -61,7 +64,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding-left: .5rem;
+    box-shadow: 2px 2px 2px gray;
     li {
         flex: 1;
     }
@@ -75,6 +79,7 @@
     cursor: pointer;
     transition: all .75s ease;
     font-size: 1.25rem;
+    outline: none;
     &:hover {
         background: violet;
         color:white;
@@ -89,8 +94,13 @@
     cursor: pointer;
     transition: all .75s ease;
     font-size: 1.25rem;
+    outline: none;
     &:hover {
         background: rgb(255, 60, 60);
         color: white;
     }
+}
+
+.doneItem {
+    text-decoration: line-through;
 }
