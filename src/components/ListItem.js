@@ -1,5 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ToDoList from './ToDoList';
+import {motion} from 'framer-motion'
+import {fall} from '../animation'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCheck, facheck, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
+
 
 const ListItem = ({text, key, list, setList, item}) => {
 
@@ -21,15 +26,25 @@ const ListItem = ({text, key, list, setList, item}) => {
 
 
     return(
-        <div className="to-do">
+        <motion.div
+         className="to-do"
+         key={item.id}
+         variants={fall}
+         initial='hidden'
+         animate='show'
+         exit='exit'>
             <li className={`item ${item.completed ? 'doneItem' : ''}`}>{text}</li>
             <button 
             className="complete" 
-            onClick={completeHandler}>Complete</button>
+            onClick={completeHandler}>
+                <FontAwesomeIcon icon={faCheck} />
+            </button>
             <button 
             className="delete"
-            onClick={deleteHandler}>Delete</button>
-        </div>
+            onClick={deleteHandler}>
+                <FontAwesomeIcon icon={faTrashAlt} />
+            </button>
+        </motion.div>
     )
 };
 
