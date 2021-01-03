@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ToDoList from './ToDoList';
 
 const ListItem = ({text, key, list, setList, item}) => {
-    
+
     const deleteHandler = () => {
         setList(list.filter(elem => elem.id !== item.id))
     };
